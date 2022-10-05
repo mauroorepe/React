@@ -1,0 +1,11 @@
+.container{
+    background-color: #191919;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+p{
+    color: aliceblue;
+    padding: 20px;
+}

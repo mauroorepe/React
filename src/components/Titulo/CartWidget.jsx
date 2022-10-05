@@ -1,6 +1,8 @@
-const CartWidget = () => {
+const CartWidget = (prop) => {
     return (
-        <div>CartWidget</div>
+        <div>
+            <img src="../../img/cart.png" className="prop" alt="" />
+        </div>
     )
 }
 
