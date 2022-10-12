@@ -1,21 +1,26 @@
-import reactLogo from './assets/react.svg'
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './App.css'
-import Titulo from './components/Titulo/Titulo'
-import NavBar from './components/Titulo/NavBar'
-import CartWidget from './components/Titulo/CartWidget'
-import ItemListContainer from './components/Titulo/ItemListContainer'
+import NavBar from './components/NavBar/NavBar'
+import CarritoPage from './components/Pages/CarritoPage/CarritoPage'
+import ItemDetailContainer from './components/Pages/ItemDetailContainer/ItemDetailContainer'
+import ItemListContainer from './components/Pages/ItemListContainer/ItemListContainer'
 
 function App() {
 
 /*   const styleApp = {backgroundColor: "#191919" , fontSize: 22} */
 
   return (
-    <div className="App" >
+    <BrowserRouter>
       <NavBar/>
-      <ItemListContainer greeting={'Hola Mundo'} />
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting={'Hola Mundo'} />} />
+        <Route path="/detalle" element={<ItemDetailContainer/>} />
+        <Route path="/cart" element={<CarritoPage/>} />
+      </Routes>
+    </BrowserRouter> 
   )
 }
+
 
 export default App
 
